@@ -11,18 +11,18 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RefreshScope
-public class ConfigClientController
-{
+public class ConfigClientController {
+
     @Value("${server.port}")
     private String serverPort;
 
     @Value("${config.info}")
+    // 从http://localhost:3344/master/config-dev.yml得到的配置文件里面有config.info的yml字段
     private String configInfo;
 
     @GetMapping("/configInfo")
-    public String configInfo()
-    {
-        return "serverPort: "+serverPort+"\t\n\n configInfo: "+configInfo;
+    public String configInfo() {
+        return "serverPort: " + serverPort + "\t\n\n configInfo: " + configInfo;
     }
 
 }

@@ -10,17 +10,19 @@ import org.springframework.context.annotation.Configuration;
  * @create 2020-02-21 11:42
  */
 @Configuration
-public class GateWayConfig
-{
+public class GateWayConfig {
+    /*
+    * 配置了一个id为path_route_atguigu的路由规则,
+    * 当访问地址http://localhost:9527/guonei的时候，会自动转发到http://news.baidu.com/guonei
+    * */
     @Bean
-    public RouteLocator customRouteLocator(RouteLocatorBuilder routeLocatorBuilder)
-    {
+    public RouteLocator customRouteLocator(RouteLocatorBuilder routeLocatorBuilder) {
         RouteLocatorBuilder.Builder routes = routeLocatorBuilder.routes();
 
         routes.route("path_route_atguigu",
-                r -> r.path("/guonei")
-                        .uri("http://news.baidu.com/guonei")).build();
+                r -> r.path("/guonei").uri("http://news.baidu.com/guonei")).build();
 
         return routes.build();
     }
+
 }

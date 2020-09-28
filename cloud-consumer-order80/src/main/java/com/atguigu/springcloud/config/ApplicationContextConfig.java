@@ -9,14 +9,13 @@ import org.springframework.web.client.RestTemplate;
  * @auther zzyy
  * @create 2020-02-18 17:27
  */
+
 @Configuration
-public class ApplicationContextConfig
-{
+public class ApplicationContextConfig {
+
     @Bean
-    //@LoadBalanced
-    public RestTemplate getRestTemplate()
-    {
+//    @LoadBalanced    // 集群环境下，开启负载均衡
+    public RestTemplate getRestTemplate() {
         return new RestTemplate();
     }
 }
-//applicationContext.xml <bean id="" class="">

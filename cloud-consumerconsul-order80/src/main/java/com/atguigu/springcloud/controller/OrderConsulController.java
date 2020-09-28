@@ -13,17 +13,17 @@ import javax.annotation.Resource;
  */
 @RestController
 @Slf4j
-public class OrderConsulController
-{
+public class OrderConsulController {
+
+    // 微服务名称
     public static final String INVOKE_URL = "http://consul-provider-payment";
 
     @Resource
     private RestTemplate restTemplate;
 
     @GetMapping(value = "/consumer/payment/consul")
-    public String paymentInfo()
-    {
-        String result = restTemplate.getForObject(INVOKE_URL+"/payment/consul",String.class);
+    public String paymentInfo() {
+        String result = restTemplate.getForObject(INVOKE_URL + "/payment/consul", String.class);
         return result;
     }
 }

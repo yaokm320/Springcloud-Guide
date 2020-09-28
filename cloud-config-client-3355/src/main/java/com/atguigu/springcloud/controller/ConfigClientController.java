@@ -11,14 +11,15 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RefreshScope
-public class ConfigClientController
-{
+public class ConfigClientController {
+
     @Value("${config.info}")
+    // 从http://localhost:3344/master/config-dev.yml得到的配置文件里面有config.info的yml字段
     private String configInfo;
 
     @GetMapping("/configInfo")
-    public String getConfigInfo()
-    {
+    public String getConfigInfo() {
         return configInfo;
     }
+
 }
