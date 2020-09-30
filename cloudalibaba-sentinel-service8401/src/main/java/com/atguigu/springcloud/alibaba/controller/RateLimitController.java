@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class RateLimitController {
+
     @GetMapping("/byResource")
     @SentinelResource(value = "byResource", blockHandler = "handleException")
     public CommonResult byResource() {

@@ -12,7 +12,6 @@
     <artifactId>cloud-stream-rabbitmq-provider8801</artifactId>
 
 
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -31,7 +30,6 @@
             <artifactId>spring-cloud-starter-stream-rabbit</artifactId>
         </dependency>
         <!--基础配置-->
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>

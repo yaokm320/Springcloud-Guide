@@ -12,8 +12,6 @@
     <artifactId>cloudalibaba-provider-payment9004</artifactId>
 
 
-
-
     <dependencies>
         <!--SpringCloud ailibaba nacos -->
         <dependency>

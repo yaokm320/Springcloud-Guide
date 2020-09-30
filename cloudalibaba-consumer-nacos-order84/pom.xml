@@ -12,7 +12,6 @@
     <artifactId>cloudalibaba-consumer-nacos-order84</artifactId>
 
 
-
     <dependencies>
         <!--SpringCloud openfeign -->
         <dependency>

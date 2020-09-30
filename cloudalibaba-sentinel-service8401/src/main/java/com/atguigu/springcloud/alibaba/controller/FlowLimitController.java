@@ -16,6 +16,7 @@ import java.util.concurrent.TimeUnit;
 @RestController
 @Slf4j
 public class FlowLimitController {
+
     @GetMapping("/testA")
     public String testA() {
         return "------testA";
@@ -27,13 +28,12 @@ public class FlowLimitController {
         return "------testB";
     }
 
-
     @GetMapping("/testD")
     public String testD() {
-//        try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); }
-//        log.info("testD 测试RT");
+        /*try { TimeUnit.SECONDS.sleep(1); } catch (InterruptedException e) { e.printStackTrace(); }
+        log.info("testD 测试RT");*/
 
-        log.info("testD 异常比例");
+        log.info("testD 测试异常比例");
         int age = 10 / 0;
         return "------testD";
     }
@@ -54,7 +54,8 @@ public class FlowLimitController {
     }
 
     public String deal_testHotKey(String p1, String p2, BlockException exception) {
-        return "------deal_testHotKey,o(╥﹏╥)o";  //sentinel系统默认的提示：Blocked by Sentinel (flow limiting)
+        //sentinel系统默认的提示：Blocked by Sentinel (flow limiting)
+        return "------deal_testHotKey,o(╥﹏╥)o";
     }
 
 }

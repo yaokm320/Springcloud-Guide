@@ -12,8 +12,6 @@
     <artifactId>cloudalibaba-consumer-nacos-order83</artifactId>
 
 
-
-
     <dependencies>
         <!--SpringCloud ailibaba nacos -->
         <dependency>
